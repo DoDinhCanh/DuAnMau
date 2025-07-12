@@ -1,0 +1,17 @@
+
+* Liệt kê các chức năng
+
+1. User
+- Đăng ký / đăng nhập tà khoản
+- Xem danh mục sản phẩm
+- Tìm kiếm sản phẩm
+- Xem chi tiết sản phẩm
+- Đánh giá và bình luận sản phẩm
+
+2. Admin
+- Quản lí tài khoản
+- Quản lí sản phẩm
+- Quản lí danh mục sản phẩm
+- Quản lí bình luận
+- Quản lí khuyến mại
+- Xem thống kê
