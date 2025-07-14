@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DICAN STORE</title>
+    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <a href="#">
+          <img src="./img/logo.png" alt="AE Boutique Logo" />
+        </a>
+      </div>
+      <nav class="nav">
+        <a href="#">TRANG CHỦ</a>
+        <a href="#">SẢN PHẨM</a>
+        <a href="#">DANH MỤC</a>
+        <a href="#">PHỤ KIỆN</a>
+        <a href="#">LIÊN HỆ</a>
+      </nav>
+      <div class="icons">
+        <span>🛒</span>
+        <span>🔍</span>
+        <div class="user-dropdown">
+          <span class="user-icon">👤</span>
+          <div class="dropdown-menu">
+            <a href="#">✏️ Chỉnh sửa tài khoản</a>
+            <a href="login.html">🔑 Đăng nhập</a>
+            <a href="#">🚪 Đăng xuất</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner">
+      <div class="main-banner">
+        <img src="./img/banner.webp" alt="Banner chính" />
+      </div>
+    </section>
+
+    <!-- Danh mục -->
+    <section class="categories">
+      <h2>Danh mục sản phẩm</h2>
+      <div class="category-list">
+        <div>
+          <img src="./img/2.png" alt="" />
+          <p>Áo phông</p>
+        </div>
+        <div>
+          <img src="./img/3.png" alt="" />
+          <p>Áo Polo</p>
+        </div>
+        <div>
+          <img src="./img/4.png" alt="" />
+          <p>Sơ mi</p>
+        </div>
+        <div>
+          <img src="./img/5.png" alt="" />
+          <p>Quần short</p>
+        </div>
+        <div>
+          <img src="./img/2.png" alt="" />
+          <p>Túi</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sản phẩm -->
+    <section class="products">
+      <h2>Sản Phẩm</h2>
+      <div class="product-list">
+        <div class="product">
+          <img src="./img/2.png" alt="" />
+          <p>Quần short kaki</p>
+          <span class="price">389.000 ₫</span>
+        </div>
+        <div class="product">
+          <img src="./img/2.png" alt="" />
+          <p>Quần short kaki</p>
+          <span class="price">329.000 ₫</span>
+        </div>
+        <div class="product">
+          <img src="./img/2.png" alt="" />
+          <p>Quần short kaki</p>
+          <span class="price">449.000 ₫</span>
+        </div>
+        <div class="product">
+          <img src="./img/2.png" alt="" />
+          <p>Quần short kaki</p>
+          <span class="price">279.000 ₫</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sản phẩm bán chạy -->
+    <section class="products">
+      <h2>Sản Phẩm Bán Chạy</h2>
+      <div class="product-list">
+        <div class="product">
+          <img src="./img/2.png" alt="" />
+          <p>Quần short kaki</p>
+          <span class="price">389.000 ₫</span>
+        </div>
+        <div class="product">
+          <img src="./img/2.png" alt="" />
+          <p>Quần short kaki</p>
+          <span class="price">329.000 ₫</span>
+        </div>
+        <div class="product">
+          <img src="./img/2.png" alt="" />
+          <p>Quần short kaki</p>
+          <span class="price">449.000 ₫</span>
+        </div>
+        <div class="product">
+          <img src="./img/2.png" alt="" />
+          <p>Quần short kaki</p>
+          <span class="price">279.000 ₫</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="column">
+          <h3>Funio.</h3>
+          <p>623 Đường Nguyễn Trãi, Quận 5, TP.HCM</p>
+        </div>
+        <div class="column">
+          <h4>Links</h4>
+          <p>About</p>
+          <p>Contact</p>
+        </div>
+        <div class="column">
+          <h4>Help</h4>
+          <p>Payment Options</p>
+          <p>Privacy Policy</p>
+        </div>
+        <div class="column">
+          <h4>Newsletter</h4>
+          <input type="email" placeholder="Email của bạn" />
+          <button>Đăng ký</button>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2025 Funio. All rights reserved.</div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const userIcon = document.querySelector(".user-icon");
+        const dropdownMenu = document.querySelector(".dropdown-menu");
+
+        userIcon.addEventListener("click", function () {
+          dropdownMenu.style.display =
+            dropdownMenu.style.display === "block" ? "none" : "block";
+        });
+
+        document.addEventListener("click", function (e) {
+          if (!e.target.closest(".user-dropdown")) {
+            dropdownMenu.style.display = "none";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
