@@ -25,12 +25,20 @@ if(isset($_GET['act'])) {
         default :
             include_once "controller/HomeController.php";
             $ctrl_home=new HomeController();
-            $ctrl_home->set_vew("home");
+            $ctrl_home->set_view("home");
             $ctrl_home->view();
             break;
     }
 }else{
     include_once "controller/HomeController.php";
+    include_once "models/config.php";
+    include_once "models/connectDB.php";
+    include_once "models/productModel.php";
+    $conn=new ConnectDB(SERVER_NAME, DB_NAME, USERNAME, PASSWORD);
+
+    $ProModel=new ProductModel(SERVER_NAME, DB_NAME, USERNAME, PASSWORD);
+    $dssp=$ProModel->get_product_all();
+
     $ctrl_home=new HomeController();
     $ctrl_home->set_view("home");
     $ctrl_home->view();
