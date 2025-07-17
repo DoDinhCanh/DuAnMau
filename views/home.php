@@ -1,55 +1,50 @@
  <?php
-    global $dssp;
-    $html_new_product="";
-    foreach ($dssp as $item) {
-      extract($item);
-      $html_new_product.='<section class="products">
-                              <h2>Sản Phẩm</h2>
-                              <div class="product-list">
-                                <div class="product">
-                                  <a href="#">
-                                    <img src="'.URL_IMG.$image.'" alt="anh sp" />
-                                    <p>'.$name.'</p>
-                                    <span class="price">'.$price.' ₫</span></a
-                                  >
-                                </div>
-                              </div>
-                            </section>';
-                            echo $html_new_product;
-    }
- ?>
+global $dssp;
+global $dsdm;
+?>
  
  <!-- Danh mục -->
-    <!-- <section class="categories">
+    <section class="categories">
       <h2>Danh mục sản phẩm</h2>
       <div class="category-list">
-        <div>
-          <img src="/DuAnMau/public/img/2.png" alt="" />
-          <p>Áo phông</p>
-        </div>
-        <div>
-          <img src="/DuAnMau/public/img/3.png" alt="" />
-          <p>Áo Polo</p>
-        </div>
-        <div>
-          <img src="/DuAnMau/public/img/4.png" alt="" />
-          <p>Sơ mi</p>
-        </div>
-        <div>
-          <img src="/DuAnMau/public/img/5.png" alt="" />
-          <p>Quần short</p>
-        </div>
-        <div>
-          <img src="/DuAnMau/public/img/2.png" alt="" />
-          <p>Túi</p>
-        </div>
+        <?php
+        $html_dm = "";
+        foreach ($dsdm as $item) {
+          extract($item);
+          $html_dm .= '<div>
+          <img src="' . URL_IMG . $image . '" alt="" />
+          <p>'.$name.'</p>
+        </div>';
+        }
+        echo $html_dm
+        ?>
+        
       </div>
-    </section> -->
-
+    </section>
     <!-- Sản phẩm -->
-
+<section class="products">
+  <h2>Sản Phẩm</h2>
+  <div class="product-list">
+    <?php
+    $html_sp = "";
+    foreach ($dssp as $item) {
+      extract($item);
+      $html_sp .= '
+        <div class="product">
+          <a href="#">
+            <img src="' . URL_IMG . $image . '" alt="anh sp" />
+            <p>' . $name . '</p>
+            <span class="price">' . $price . ' ₫</span>
+          </a>
+        </div>
+      ';
+    }
+    echo $html_sp;
+    ?>
+  </div>
+</section>
     <!-- Sản phẩm bán chạy -->
-    <section class="products">
+    <!-- <section class="products">
       <h2>Sản Phẩm Bán Chạy</h2>
       <div class="product-list">
         <div class="product">
@@ -73,4 +68,4 @@
           <span class="price">279.000 ₫</span>
         </div>
       </div>
-    </section>
+    </section> -->
